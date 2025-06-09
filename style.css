@@ -1,5 +1,5 @@
 body {
-  background-image: url('https://github.com/Arkan-Host/arzxd.official/blob/main/background.png');
+  background-image: src('background.png');
   background-size: 100%;
   background-repeat: no-repeat;
   background-size: cover;
