@@ -59,18 +59,6 @@ h4 {
   border-radius: 10px;
   border: 2px solid white;
 }
-.text-bottom {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
-  background-color: black;
-  color: white;
-  opacity: 65%;
-  text-align: center;
-  width: 100%;
-  text-align: center;
-  border: 2px solid white;
-}
 audio {
   background: white;
   opacity: 65%;
@@ -78,26 +66,29 @@ audio {
   display: grid;
   place-self: center;
 }
-.marquee {
+.marquee-container {
   width: 100%;
   overflow: hidden;
   white-space: nowrap;
-  box-sizing: border-box;
-  border-radius: 2px solid white;
+  background: #000;
+  opacity: 65%;
+  padding: 15px 0;
 }
 
-.marquee span {
+.marquee-content {
   display: inline-block;
   padding-left: 100%;
-  animation: marquee 10s linear infinite;
+  animation: scroll-left 12s linear infinite;
+  font-size: 22px;
   color: white;
-  font-size: 20px;
-  background-color: black;
-  opacity: 65%;
-  width: 100%;
+  text-shadow:
+    0 0 5px white,
+    0 0 10px white,
+    0 0 20px white,
+    0 0 40px white;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
   100% { transform: translateX(-100%); }
 }
